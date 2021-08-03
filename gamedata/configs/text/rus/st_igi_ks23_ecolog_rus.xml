@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<!--
+	Weapons
+-->
+
+<string_table>
+	
+	<string id="st_wpn_ks23_ecolog">
+		<text>КС-23 Эколог</text>
+	</string>
+	<string id="st_wpn_ks23_ecolog_descr">
+		<text> Модификация КС-23, разработанная для нужд научного состава, находящегося в ЧЗО.\n \n</text>
+	</string>
+	
+	<string id="ammo_23_eco">
+		<text>Патрон Эколог-23</text>
+	</string>
+	<string id="ammo_23_eco_descr">
+		<text>Специальный патрон, разработанный для нужд научного состава, находящегося в ЧЗО. В зависимости от задачи, наполняется разного вида растворами. Требует очень осторожного обращения. Способ использования: очень медленно поместить в оружие.\n \n%c[d_purple] • %c[ui_gray_2] пробивает броню класса: %c[ui_gray_1]нет пробития\n%c[d_purple] • %c[ui_gray_2] повреждение тканей: %c[ui_gray_1]нет\n \n%c[ui_gray_1]ОСОБЕННОСТЬ:\n \n%c[d_purple] • %c[ui_gray_2] С помощью тонкой вольфрамовой иглы пробивает кожу мутантов для впрыска раствора, находящегося в цилиндре.</text>
+	</string>
+	<string id="ammo_23_eco_s">
+		<text>Эколог-23</text>
+	</string>
+
+</string_table>

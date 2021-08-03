@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+
+	<string id="st_wpn_igi_ks23_ecolog">
+		<text>KЅ-23 Ecolog</text>
+	</string>
+
+	<string id="st_wpn_igi_ks23_ecolog_descr">
+		<text> Modification of KS-23, developed for the needs of the scientific staff located in the Zone.\n \n</text>
+	</string>
+
+	<string id="ammo_23_igi_eco">
+		<text>Ecolog-23 cartridge</text>
+	</string>
+
+	<string id="ammo_23_igi_eco_descr">
+		<text>A special cartridge designed for the needs of the scientific staff located in the Zone. Depending on the task, it is filled with different types of solutions. Requires very careful handling. How to use: very slowly put into the weapon.\n \n%c[d_purple]  %c[ui_gray_2] Highest pierced armour class: %c[ui_gray_1]none\n%c[d_purple]  %c[ui_gray_2] Tissue damage rating: %c[ui_gray_1]none\n \n%c[ui_gray_1]SPECIAL:\n \n%c[d_purple]  %c[ui_gray_2] Using a thin wolfram needle, it pierces the skin of the mutants to inject the solution.</text>
+	</string>
+
+	<string id="ammo_23_igi_eco_s">
+		<text>Ecolog-23</text>
+	</string>
+
+</string_table>
