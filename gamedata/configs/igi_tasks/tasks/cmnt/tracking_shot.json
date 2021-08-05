@@ -5,42 +5,32 @@
 	"setup": [
 		{
 			"entity_type":"location",
-			"where":0,
-			"amount": 1
+			"where":0
 		},
 
 		{
 			"entity_type":"location",
-			"where":"nearby",
-			"amount": 1
+			"where":"nearby"
 		},
 
 		{
 			"entity_type":"squad",
 			"section":"simulation_flesh",
-			"to_create": true,
 			"where":"$location_2_1$",
 			"target":"shoot",
         	"keep_alive": true,
-        	"weapon": "wpn_igi_ks23_ecolog",
-			"amount": 1
+        	"weapon": "wpn_igi_ks23_ecolog"
 		},
 
 		{
 			"entity_type":"item",
 			"section":"wpn_igi_ks23_ecolog",
-			"to_create":true,
-			"where":"$location_1_1$",
-			"target":"return",
-			"amount": 1
+			"target":"return"
 		},
 
 		{
 			"entity_type":"item",
-			"section":"ammo_23_igi_eco",
-			"to_create":true,
-			"where":"$location_1_1$",
-			"amount": 1
+			"section":"ammo_23_igi_eco"
 		}
 	]
 }
