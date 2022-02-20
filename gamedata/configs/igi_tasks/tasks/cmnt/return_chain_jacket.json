@@ -1,0 +1,18 @@
+{
+	"disabled":false,
+	"setup": [
+		{
+		"entity_type":"location",
+		"search_distance": "0, 0"
+		},
+
+		{
+		"entity_type":"item",
+		"amount":1,
+		"section":"bandit_novice_outfit_alt",
+		"target":"return",
+		"to_create":true,
+		"mark": "treasure_unique"
+		}
+	]
+}
