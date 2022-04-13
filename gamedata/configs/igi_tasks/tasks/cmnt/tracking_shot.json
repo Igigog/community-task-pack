@@ -2,35 +2,44 @@
 	"preconditions": {
 	},
 	"disabled":false,
-	"setup": [
+	"entities": [
 		{
 			"entity_type":"location",
-			"where":0
+			"id":0,
+			"no_description": true
 		},
 
 		{
 			"entity_type":"location",
-			"where":"nearby"
+			"where":"1,1",
+			"search_for": "smart"
 		},
 
 		{
 			"entity_type":"squad",
-			"section":"simulation_flesh",
+			"section_name":"simulation_flesh",
 			"where":"$location_2_1$",
 			"target":"shoot",
         	"keep_alive": true,
-        	"weapon": "wpn_igi_ks23_ecolog"
+        	"weapon": "wpn_igi_ks23_ecolog",
+			"to_create": true
 		},
 
 		{
 			"entity_type":"item",
-			"section":"wpn_igi_ks23_ecolog",
-			"target":"return"
+			"section_name":"wpn_igi_ks23_ecolog",
+			"target":"return",
+			"to_create": true,
+			"where": "$location_1_1$",
+			"no_description": true
 		},
 
 		{
 			"entity_type":"item",
-			"section":"ammo_23_igi_eco"
+			"section_name":"ammo_23_igi_eco",
+			"to_create": true,
+			"where": "$location_1_1$",
+			"no_description": true
 		}
 	]
 }
