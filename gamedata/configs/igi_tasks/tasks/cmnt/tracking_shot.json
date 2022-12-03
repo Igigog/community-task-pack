@@ -41,5 +41,8 @@
 			"where": "$location_1_1$",
 			"no_description": true
 		}
+	],
+	"quest_givers": [
+		{"Ecolog": true, "Leader": true}
 	]
 }
