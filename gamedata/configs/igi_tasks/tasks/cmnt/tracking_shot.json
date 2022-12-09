@@ -18,7 +18,7 @@
 		{
 			"entity_type":"squad",
 			"section_name":"simulation_flesh",
-			"where":"$location_2_1$",
+			"where": "[location_2_1.id]",
 			"target":"shoot",
         	"keep_alive": true,
         	"weapon": "wpn_igi_ks23_ecolog",
@@ -30,7 +30,7 @@
 			"section_name":"wpn_igi_ks23_ecolog",
 			"target":"return",
 			"to_create": true,
-			"where": "$location_1_1$",
+			"where": "[location_1_1.id]",
 			"no_description": true
 		},
 
@@ -38,7 +38,7 @@
 			"entity_type":"item",
 			"section_name":"ammo_23_igi_eco",
 			"to_create": true,
-			"where": "$location_1_1$",
+			"where": "[location_1_1.id]",
 			"no_description": true
 		}
 	],

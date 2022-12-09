@@ -3,7 +3,8 @@
 	"entities": [
 		{
 		"entity_type":"location",
-		"search_distance": "0, 0"
+		"search_for":  "smart",
+		"where": "0,0"
 		},
 
 		{
@@ -12,6 +13,7 @@
 		"section_name":"bandit_novice_outfit_alt",
 		"target":"return",
 		"to_create":true,
+		"where": "[location_1_1.id]",
 		"mark": "treasure_unique"
 		}
 	],
