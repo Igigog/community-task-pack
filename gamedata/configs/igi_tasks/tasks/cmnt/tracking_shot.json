@@ -11,7 +11,7 @@
 
 		{
 			"entity_type":"location",
-			"where":"1,1",
+			"where":"0,0",
 			"search_for": "smart"
 		},
 
@@ -20,7 +20,6 @@
 			"section_name":"simulation_flesh",
 			"where": "[location_2_1.id]",
 			"target":"shoot",
-        	"keep_alive": true,
         	"weapon": "wpn_igi_ks23_ecolog",
 			"to_create": true
 		},
