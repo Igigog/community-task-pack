@@ -6,19 +6,21 @@
 		{
 			"entity_type":"location",
 			"id":0,
-			"no_description": true
+			"no_description": true,
+			"link_id": "actor"
 		},
 
 		{
 			"entity_type":"location",
 			"where":"0,0",
-			"search_for": "smart"
+			"search_for": "smart",
+			"link_id": "smart"
 		},
 
 		{
 			"entity_type":"squad",
 			"section_name":"simulation_flesh",
-			"where": "[location_2_1.id]",
+			"where": "[smart.id]",
 			"target":"shoot",
         	"weapon": "wpn_igi_ks23_ecolog",
 			"to_create": true
@@ -29,7 +31,7 @@
 			"section_name":"wpn_igi_ks23_ecolog",
 			"target":"return",
 			"to_create": true,
-			"where": "[location_1_1.id]",
+			"where": "[actor.id]",
 			"no_description": true
 		},
 
@@ -37,7 +39,7 @@
 			"entity_type":"item",
 			"section_name":"ammo_23_igi_eco",
 			"to_create": true,
-			"where": "[location_1_1.id]",
+			"where": "[actor.id]",
 			"no_description": true
 		}
 	],
