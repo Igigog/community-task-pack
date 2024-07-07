@@ -1,7 +1,4 @@
 {
-	"preconditions": {
-	},
-	"disabled":false,
 	"entities": [
 		{
 			"entity_type":"location",
