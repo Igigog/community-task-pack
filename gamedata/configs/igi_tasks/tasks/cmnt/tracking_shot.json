@@ -8,9 +8,8 @@
 		},
 
 		{
-			"entity_type":"location",
-			"where":"0,0",
-			"search_for": "smart",
+			"GEN": "igi_generate.Split('ids', 'id', 1)",
+			"ids": "&igi_finder.get_smarts_string(0,0)&",
 			"link_id": "smart"
 		},
 
