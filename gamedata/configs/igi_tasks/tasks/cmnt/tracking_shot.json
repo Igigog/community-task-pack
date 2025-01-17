@@ -14,28 +14,25 @@
 		},
 
 		{
-			"entity_type":"squad",
 			"section_name":"simulation_flesh",
-			"where": "[smart.id]",
+			"id": "!&igi_target_basic.squad_create([smart.id], '[this.section_name]').id&",
+			"init": "!&igi_target_basic.init_squad([this.id])&",
 			"target":"shoot",
-        	"weapon": "wpn_igi_ks23_ecolog",
-			"to_create": true
+        	"weapon": "wpn_igi_ks23_ecolog"
 		},
 
 		{
 			"entity_type":"item",
 			"section_name":"wpn_igi_ks23_ecolog",
+			"id": "!&igi_target_basic.create_in_inventory('[this.section_name]', 0)&",
 			"target":"return",
-			"to_create": true,
-			"where": "[actor.id]",
 			"no_description": true
 		},
 
 		{
 			"entity_type":"item",
 			"section_name":"ammo_23_igi_eco",
-			"to_create": true,
-			"where": "[actor.id]",
+			"id": "!&igi_target_basic.create_in_inventory('[this.section_name]', 0)&",
 			"no_description": true
 		}
 	],
