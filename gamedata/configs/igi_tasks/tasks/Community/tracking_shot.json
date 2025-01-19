@@ -1,4 +1,5 @@
 {
+	"WTF_VERSION": "4.0",
 	"entities": [
 		{
 			"GEN": "igi_generate.Split('ids', 'id', 1)",
