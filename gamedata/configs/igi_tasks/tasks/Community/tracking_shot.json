@@ -22,13 +22,13 @@
 			"section_name":"wpn_igi_ks23_ecolog",
 			"id": "1$ alife_create_item(|this.section_name|, alife_object(0)).id",
 			"notify": "1$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
-			"CONTROLLER":"igi_target_return.Return",
+			"CONTROLLER":"igi_target_return.Return"
 		},
 
 		{
 			"section_name":"ammo_23_igi_eco",
 			"id": "1$ alife_create_item(|this.section_name|, alife_object(0)).id",
-			"notify": "1$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
+			"notify": "1$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1"
 		}
 	],
 	"quest_givers": [
