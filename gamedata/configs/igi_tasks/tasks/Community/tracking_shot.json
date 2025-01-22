@@ -12,7 +12,7 @@
 		{
 			"section_name":"simulation_flesh",
 			"id": "1$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-			"init": "1$ igi_target_basic.init_squad(|this.id|) or 1",
+			"init": "1$ igi_helper.init_squad(|this.id|)",
 			"CONTROLLER":"igi_target_shoot.Shoot",
         	"weapon": "wpn_igi_ks23_ecolog",
 			"to_description": true
