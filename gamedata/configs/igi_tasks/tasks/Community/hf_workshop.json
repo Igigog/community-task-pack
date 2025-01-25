@@ -1,0 +1,39 @@
+{
+	"WTF_VERSION": "4.0",
+	"preconditions": [
+		"$ has_alife_info(|CACHE.tg_name| .. '_upgrade_tier_3')",
+		"$ not has_alife_info('wtf_hf_workshop_done')"
+	],
+	"requirements": ["$ ini_sys:section_exist(|CACHE.workshop_section|)"],
+
+	"entities": [	
+	{
+		"link_id": "weapon",
+		"CONTROLLER": "@$ wtf_target_repair.Repair",
+		"all_sections": "$ igi_helper.db_ini:collect_section('hf_weapon_repair')",
+		"section_name":"$ igi_utils.random_table_key(|this.all_sections|)",
+		"id": "1$ alife_create_item(|this.section_name|, db.actor).id",
+		"notify": "1$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
+		"actions": [{
+			"when": "@$ get_object_by_id(|this.id|) ~= nil",
+			"run": "@$ wtf_hf_tasks.set_item_condition(|this.id|, 10, 40)"
+		}
+	]
+	},
+
+	{
+		"id": "1$ |weapon.id|",
+		"CONTROLLER": "@$ igi_target_return.Return"
+	}
+	],
+
+	"rewarder": "@$ igi_rewards.Static({money = 0, goodwill = 30})",
+	"reward_workshop": "on_complete$ itms_manager.relocate_item_to_actor(db.actor, nil, |CACHE.workshop_section|) or 1",
+	"do_once": "on_complete$ give_info('wtf_hf_workshop_done') or 1",
+
+	"tg_name": "$ alife_object(|CACHE.task_giver_id|):section_name()",
+	"workshop_section": "workshop_item",
+	"quest_givers": [
+		{"Mechanic": true}
+	]
+}

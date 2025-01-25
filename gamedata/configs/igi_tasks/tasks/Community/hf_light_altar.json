@@ -1,0 +1,21 @@
+{
+	"WTF_VERSION": "4.0",
+	"icon": "ui_iconsTotal_artefact",
+	"preconditions": [
+		"$ db.actor:has_info('yan_labx16_switcher_primary_off')"
+	],
+	"requirements": ["$ ini_sys:section_exist(|CACHE.altar_section|)"],
+	"entities": [
+	{
+		"CONTROLLER":"@$ igi_target_fetch.Fetch",
+		"section_name":"af_electra_moonlight",
+		"to_description": true
+	}
+	],
+	"quest_givers": [
+		{"Sakharov": true}
+	],
+	"rewarder": "@$ igi_rewards.Static({money = 0, goodwill = 30})",
+	"reward_altar": "on_complete$ itms_manager.relocate_item_to_actor(db.actor, nil, |CACHE.altar_section|) or 1",
+	"altar_section": "device_light_altar"
+}
