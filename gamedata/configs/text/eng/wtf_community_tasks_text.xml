@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+
+	<!-- mutant -->
+	<string id="igi_task_text_community_sid_bribery_name">
+		<text>The more you know...</text>
+	</string>
+	<string id="igi_task_text_community_sid_bribery_text">
+		<text>My job is to leave the package at the spot near the checkpoint.</text>
+	</string>
+	<string id="igi_task_text_community_sid_bribery_about">
+		<text>So, here's the deal... I need you to deliver a package to the military, the contents of which should not concern you. You'll take it to the checkpoint down in the south. The soldiers are a bit twitchy, so they'll shoot you on sight. You'll have to drop off the package to the southeast of the checkpoint, behind the fence. I'll mark the spot on your map. Don't talk to anyone and try not to attract any attention. Once you drop off the package, get back to me.</text>
+	</string>
+	<string id="igi_task_text_community_sid_bribery_finish">
+		<text>Let me call the commander... Yes... He got the package. Well done. Here's your reward. And don't talk to anyone about this, understood?</text>
+	</string>
+
+</string_table>
