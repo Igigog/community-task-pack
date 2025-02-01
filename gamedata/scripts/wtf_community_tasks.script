@@ -1,0 +1,25 @@
+function kill_squad(id)
+    local members = {}
+    local se_squad = alife_object(id)
+    for se_member in se_squad:squad_members() do
+        members[#members+1] = se_member
+    end
+
+    local out = {}
+    for _, se_member in pairs(members) do
+        out[#out+1] = se_member.id
+
+        local npc = get_object_by_id(se_member.id)
+        npc:kill(npc)
+        se_save_var(se_member.id, npc:name(), "dont_release", true)
+    end
+
+    return out
+end
+
+function let_release(ids)
+    for _, id in pairs(ids) do
+        se_save_var(id, "", "dont_release", nil)
+    end
+    return true
+end
