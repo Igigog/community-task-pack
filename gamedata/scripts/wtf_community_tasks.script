@@ -13,7 +13,7 @@ function actor_on_interaction(key, _, key2)
 
     CreateTimeEvent('wtf_community', 'emission_quest', 5, function ()
         local tg_id = get_story_se_object("yan_stalker_sakharov").id
-        local task_id = igi_task_manager.validate_task({"community", "order_ecolog"}, tg_id)
+        local task_id = igi_task_manager.validate_task({"community", "orders_ecolog"}, tg_id)
         if task_id then
             task_manager.get_task_manager():give_task(task_id)
         end
