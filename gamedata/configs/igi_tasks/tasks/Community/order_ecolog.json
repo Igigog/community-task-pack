@@ -1,0 +1,25 @@
+{
+	"WTF_VERSION": "4.0",
+	"quest_givers": [],
+	"icon": "ui_inGame2_Put_v_pripyat",
+	"requirements": ["$ #|arti.on_player_level| > 0"],
+	"entities": [
+		{
+			"link_id": "arti",
+			"artefacts": "$ wtf_community_tasks.keys(bind_anomaly_zone.parent_zones_by_artefact_id)",
+			"on_player_level": "$ wtf_community_tasks.filter_on_player_level(|this.artefacts|)",
+			"id": "$ igi_utils.get_random_items(|this.on_player_level|, 1)[1]"
+		},
+
+		{
+			"id": "$ |arti.id| and bind_anomaly_zone.parent_zones_by_artefact_id[|arti.id|].object:id()",
+			"CONTROLLER": "@$ igi_target_visit.Visit"
+		},
+
+		{
+			"section_name": "$ alife_object(|arti.id|):section_name()",
+			"CONTROLLER": "@$ igi_target_fetch.Fetch",
+			"to_description": true
+		}
+	]
+}
