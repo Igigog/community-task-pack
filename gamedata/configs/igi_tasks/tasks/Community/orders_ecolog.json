@@ -2,7 +2,11 @@
 	"WTF_VERSION": "4.0",
 	"quest_givers": [],
 	"icon": "ui_inGame2_Put_v_pripyat",
-	"requirements": ["$ #|arti.on_player_level| > 0"],
+	"rewarder": "@$ igi_rewards.Static({money = 15000, goodwill = 80})",
+	"requirements": [
+		"$ db.actor:character_community() == 'actor_ecolog'",
+		"$ #|arti.on_player_level| > 0"
+	],
 	"entities": [
 		{
 			"link_id": "arti",

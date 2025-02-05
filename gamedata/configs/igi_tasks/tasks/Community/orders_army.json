@@ -1,0 +1,16 @@
+{
+	"WTF_VERSION": "4.0",
+	"quest_givers": [],
+	"icon": "ui_inGame2_Put_v_pripyat",
+	"requirements": [
+		"$ db.actor:character_community() == 'actor_army'",
+		"$ level.name() == 'l03_agroprom'"
+	],
+	"entities": [
+		{
+			"smarts": "$ igi_finder.get_smarts(0,0)",
+            "GEN": "@$ igi_generate.Split('smarts', 'id', 3)",
+            "CONTROLLER": "@$ igi_target_visit.Visit"
+		}
+	]
+}
