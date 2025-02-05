@@ -1,5 +1,6 @@
 {
-	"WTF_VERSION": "4.0",
+	THIS QUEST IS NOT READY.
+    "WTF_VERSION": ...,
 	"icon": "ui_iconsTotal_artefact",
 	"preconditions": [
 		"$ db.actor:community_goodwill(|CACHE.tg_community|) >= 700",
