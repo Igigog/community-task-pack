@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <string_table>
 	<!-- MCM option text -->
-	<string id="igi_task_text_community_hf_light_altar_title">
+	<string id="igi_task_text_community_hf_light_altar_name">
 		<text>Artefact Hunt for Strange Device</text>
 	</string>
 	
