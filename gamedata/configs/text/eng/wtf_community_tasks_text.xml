@@ -4,7 +4,7 @@
 
 	<!-- Sid bribery -->
 	<string id="igi_task_text_community_sid_bribery_name">
-		<text>The more you know...</text>
+		<text>The more you know</text>
 	</string>
 	<string id="igi_task_text_community_sid_bribery_text">
 		<text>My job is to leave the package at the spot near the checkpoint.</text>
@@ -14,6 +14,48 @@
 	</string>
 	<string id="igi_task_text_community_sid_bribery_finish">
 		<text>Let me call the commander... Yes... He got the package. Well done. Here's your reward. And don't talk to anyone about this, understood?</text>
+	</string>
+
+		<!-- Orders! Ecolog -->
+	<string id="igi_task_text_community_orders_ecolog_name">
+		<text>Order! Daily Research</text>
+	</string>
+	<string id="igi_task_text_community_orders_ecolog_text">
+		<text>I should research the anomaly and bring any anomalous substances to Sakharov.</text>
+	</string>
+	<string id="igi_task_text_community_orders_ecolog_about">
+		<text>Attention, all researchers! The emission has finally subsided, and our instruments indicate an immense surge in psionic energy. Immediate action is required - proceed at once to survey the anomalous zones and conduct rigorous measurements. Any artefacts recovered must be brought to my bunker without delay. We cannot afford to squander this unique opportunity for scientific advancement!</text>
+	</string>
+	<string id="igi_task_text_community_orders_ecolog_finish">
+		<text>Ah, this is what you've found? Yes... splendid - excellent work! I'll analyze the attributes of this new artefact; hopefully, it will provide us with fresh insights into the emissions and their effects on anomalies. Take your payment as a token of appreciation for your efforts, dear colleague.</text>
+	</string>
+
+		<!-- Orders! Duty -->
+	<string id="igi_task_text_community_orders_duty_name">
+		<text>Order! Reporting for Duty</text>
+	</string>
+	<string id="igi_task_text_community_orders_duty_text">
+		<text>I need to clear the territory of Duty from any mutants.</text>
+	</string>
+	<string id="igi_task_text_community_orders_duty_about">
+		<text>Colonel Petrenko here, addressing all soldiers in the bar. Report for duty and get organized - break time is over. A new pack of blind dogs has been spotted near the Bar. Eliminating them is an order to ensure the safety of incoming stalkers. The first soldier to complete the task will receive proper payment.</text>
+	</string>
+	<string id="igi_task_text_community_orders_duty_finish">
+		<text>Good work. Take your pay and fall back in. I have other matters to handle - dismissed.</text>
+	</string>
+
+		<!-- Orders! Army -->
+	<string id="igi_task_text_community_orders_army_name">
+		<text>Order! Keeping Watch</text>
+	</string>
+	<string id="igi_task_text_community_orders_army_text">
+		<text>I should scout the locations around Agroprom.</text>
+	</string>
+	<string id="igi_task_text_community_orders_army_about">
+		<text>All personnel entering Agroprom are required to scout the designated areas. Conduct reconnaissance with discretion and eliminate any threats on sight. Report back to me upon completion of your orders.</text>
+	</string>
+	<string id="igi_task_text_community_orders_army_finish">
+		<text>Is that everything you have to report? Good. I'll relay this to the next patrols before moving out. Good work, soldier. You are dismissed.</text>
 	</string>
 
 </string_table>

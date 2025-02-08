@@ -31,7 +31,7 @@ function on_level_changing_army()
     local task_id = igi_task_manager.validate_task({"community", "orders_army"}, tg.id)
     if task_id then
         task_manager.get_task_manager():give_task(task_id)
-        news_manager.send_tip(db.actor, "wtf_community_orders_army_about", nil, tg, 10000)
+        news_manager.send_tip(db.actor, "igi_task_text_community_orders_army_about", nil, tg, 10000)
     end
 end
 
@@ -40,7 +40,7 @@ function on_level_changing_duty()
     local task_id = igi_task_manager.validate_task({"community", "orders_duty"}, tg.id)
     if task_id then
         task_manager.get_task_manager():give_task(task_id)
-        news_manager.send_tip(db.actor, "wtf_community_orders_duty_about", nil, tg, 10000)
+        news_manager.send_tip(db.actor, "igi_task_text_community_orders_duty_about", nil, tg, 10000)
     end
 end
 
