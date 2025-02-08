@@ -1,5 +1,6 @@
 {
-	"WTF_VERSION": "4.0",
+	"WTF_VERSION": "4.1",
+	"CREDITS": "\\nNerkokant, Igigog - idea\\nIgigog - scripting\\Folk - descriptions",
 	"quest_givers": [],
 	"icon": "ui_inGame2_Put_v_pripyat",
 	"requirements": [

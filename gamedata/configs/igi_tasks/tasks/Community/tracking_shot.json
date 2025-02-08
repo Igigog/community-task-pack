@@ -1,5 +1,6 @@
 {
-	"WTF_VERSION": "4.0",
+	"WTF_VERSION": "4.1",
+	"CREDITS": "\\nNerkokant - idea\\nIgigog - scripting\\nMich - KS23 Blowgun\\nBilly, Medic - descriptions",
 	"entities": [
 		{
 			"GEN": "@$ igi_generate.Split('ids', 'id', 1)",

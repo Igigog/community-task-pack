@@ -1,5 +1,6 @@
 {
-	"WTF_VERSION": "4.0",
+	"WTF_VERSION": "4.1",
+	"CREDITS": "Aoldri - idea and initial implementation",
 	"icon": "ui_iconsTotal_artefact",
 	"preconditions": [
 		"$ db.actor:has_info('yan_labx16_switcher_primary_off')"
