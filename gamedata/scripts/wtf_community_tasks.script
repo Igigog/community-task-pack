@@ -58,7 +58,7 @@ function actor_on_interaction(key, _, key2)
         local task_id = igi_task_manager.validate_task({"community", "orders_ecolog"}, tg.id)
         if task_id then
             task_manager.get_task_manager():give_task(task_id)
-            news_manager.send_tip(db.actor, "wtf_community_orders_ecolog_about", nil, tg, 10000)
+            news_manager.send_tip(db.actor, "igi_task_text_community_orders_ecolog_about", nil, tg, 10000)
         end
         return true
     end)
