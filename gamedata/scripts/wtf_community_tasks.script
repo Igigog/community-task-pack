@@ -28,7 +28,7 @@ end
 
 function on_level_changing_army()
     local tg = get_story_se_object("agr_smart_terrain_1_6_near_2_military_colonel_kovalski")
-    local task_id = igi_task_manager.validate_task({"community", "orders_army"}, tg.id)
+    local task_id = tg and igi_task_manager.validate_task({"community", "orders_army"}, tg.id)
     if task_id then
         task_manager.get_task_manager():give_task(task_id)
         news_manager.send_tip(db.actor, "igi_task_text_community_orders_army_about", nil, tg, 10000)
@@ -37,7 +37,7 @@ end
 
 function on_level_changing_duty()
     local tg = get_story_se_object("bar_dolg_general_petrenko_stalker")
-    local task_id = igi_task_manager.validate_task({"community", "orders_duty"}, tg.id)
+    local task_id = tg and igi_task_manager.validate_task({"community", "orders_duty"}, tg.id)
     if task_id then
         task_manager.get_task_manager():give_task(task_id)
         news_manager.send_tip(db.actor, "igi_task_text_community_orders_duty_about", nil, tg, 10000)
@@ -55,7 +55,7 @@ function actor_on_interaction(key, _, key2)
 
     CreateTimeEvent('wtf_community', 'emission_quest', 5, function ()
         local tg = get_story_se_object("yan_stalker_sakharov")
-        local task_id = igi_task_manager.validate_task({"community", "orders_ecolog"}, tg.id)
+        local task_id = tg and igi_task_manager.validate_task({"community", "orders_ecolog"}, tg.id)
         if task_id then
             task_manager.get_task_manager():give_task(task_id)
             news_manager.send_tip(db.actor, "igi_task_text_community_orders_ecolog_about", nil, tg, 10000)
