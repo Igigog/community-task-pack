@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+
+	<!-- medic_package -->
+	<string id="wtf_community_medic_package_ask_for_package">
+		<text>I'm here to get the package.</text>
+	</string>
+
+    <string id="wtf_community_medic_package_give_package">
+		<text>Sure. Tell Medic he owes us one.</text>
+	</string>
+
+    <string id="wtf_community_medic_package_give_package_end">
+		<text>Deal.</text>
+	</string>
+
+</string_table>

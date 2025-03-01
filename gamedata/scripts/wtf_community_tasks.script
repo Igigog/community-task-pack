@@ -83,10 +83,8 @@ function kill_squad(id)
     return out
 end
 
-function let_release(ids)
-    for _, id in pairs(ids) do
-        se_save_var(id, "", "dont_release", nil)
-    end
+function let_release(id)
+    se_save_var(id, "", "dont_release", nil)
     return true
 end
 

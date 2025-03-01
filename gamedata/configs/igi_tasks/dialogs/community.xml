@@ -1,0 +1,18 @@
+<dialog id="wtf_community_medic_package_ask">
+    <precondition>igi_dialogs.data.community_medic_package.package_in_npc</precondition>
+    <phrase_list>
+        <phrase id="0">
+            <text>wtf_community_medic_package_ask_for_package</text>
+            <next>111</next>
+        </phrase>
+        <phrase id="111">
+            <action>igi_dialogs.data.community_medic_package.give_package</action>
+            <action>igi_dialogs.data.community_medic_package.notify_give_package</action>
+            <text>wtf_community_medic_package_give_package</text>
+            <next>1111</next>
+        </phrase>
+        <phrase id="1111">
+            <text>wtf_community_medic_package_give_package_end</text>
+        </phrase>
+    </phrase_list>
+</dialog>
