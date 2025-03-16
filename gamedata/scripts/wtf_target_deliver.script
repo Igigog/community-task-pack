@@ -16,7 +16,7 @@ function is_close(se_obj_target, se_obj_location)
 end
 
 Deliver = {}
-function Deliver.entity_on_first_run(entity)
+function Deliver.on_init(entity)
     trace_assert(type(entity.id) == "number", "Deliver: entity.id is not a number")
     trace_assert(alife_object(entity.id), "Deliver: no server object for entity.id")
 

@@ -1,6 +1,6 @@
 {
     "WTF_VERSION": "4.2",
-	"icon": "ui_iconsTotal_artefact",
+	"icon": "ui_iconsTotal_found_thing",
     "quest_givers": [
 		{"Mercenary": true, "Medic": true}
 	],
@@ -8,26 +8,20 @@
 		"$ db.actor:community_goodwill(|CACHE.tg_community|) >= 700"
 	],
     "requirements": [
-        "$ #|setup.smarts| > 1",
-        "$ |setup.enemy_faction| ~= 'stalker'",
-        "$ ini_sys:section_exist(|setup.enemy_section|)"
+        "$ #|setup.smarts| > 1"
     ],
 
 	"rewarder": "@$ igi_rewards.Static({money = 10000, goodwill = 50})",
 
     "tg_community": "$ igi_helper.get_community_by_id(|CACHE.task_giver_id|)",
     "squad_dead": "$ true -- igi_random.rand() < 0.5",
-    "notify_squad_dead": "$ igi_helper.trace_error('Squad dead: ' .. tostring(|CACHE.squad_dead|)) or 1",
-    "enable_attacker_squad": "1$ |CACHE.squad_dead| and igi_generic_task.update_entities(|CACHE.task_id|, {add = {'attacker_entities'}}) or 1",
+    "enable_attacker_squad": "1$ |CACHE.squad_dead| and igi_generic_task.add_entities(|CACHE.task_id|, 'attacker_entities')",
 
 	"entities": [
         {
             "level": "$ wtf.shuffle(igi_finder.get_levels(1,1))[1]",
             "all_smarts": "$ igi_finder.get_smarts_by_lvl(|this.level|)",
             "smarts": "$ wtf.shuffle(|this.all_smarts|)",
-
-            "enemy_faction": "$ igi_macros.Faction(|CACHE.task_giver_id|, 'enemy of actor and enemy of taskgiver')",
-            "enemy_section": "$ 'army_sim_squad_alpha' --|this.enemy_faction| .. '_sim_squad_alpha'",
 
             "link_id": "setup"
         },
@@ -43,22 +37,33 @@
             "section_name":"merc_sim_squad_advanced",
 
             "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-            "del": "del$ wtf.set(alife_object(|this.id|) or {}, 'scripted_target', nil) or 1",
+            "se_obj": "@$ alife_object(|this.id|) or false",
 
-            "force_online": "init$ wtf.set(alife_object(|this.id|), 'force_online', true)",
-            "-force_online": "del$ wtf.set(alife_object(|this.id|) or {}, 'force_online', false)",
+            "del": "del$ wtf.set(|this.se_obj| or {}, 'scripted_target', nil) or 1",
+
+            "force_online": "init$ wtf.set(|this.se_obj|, 'force_online', true)",
+            "-force_online": "del$ wtf.set(|this.se_obj| or {}, 'force_online', false)",
 
             "no_offline_combat": "init$ wtf.set(sim_offline_combat.task_squads, |this.id|, true)",
             "-no_offline_combat": "del$ wtf.set(sim_offline_combat.task_squads, |this.id|, nil) or 1",
+
+            "actions": [
+                {
+                    "COMMENT": "Reset gametime so they don't leave",
+                    "when": "@$ |this.se_obj|",
+                    "run": "@$ wtf.set(|this.se_obj| or {}, 'stay_time', game.get_game_time())"
+                }
+            ],
 
             "link_id": "friend_squad"
         },
 
         {
             "link_id": "friend_commander",
-            "id": "init$ alife_object(|friend_squad.id|):commander_id()",
+            "id": "init$ |friend_squad.se_obj|:commander_id()",
             "package_in_npc": "@$ (alife_object(|package.id|) or {}).parent_id == |this.id|",
             "give_package": "@$ get_object_by_id(|this.id|):transfer_item(get_object_by_id(|package.id|), db.actor)",
+            "make_squad_enemy": "@$ |friend_squad.se_obj|:set_squad_relation('enemy')",
             "notify_give_package": "@$ news_manager.relocate_item(db.actor, 'out', |package.section_name|, 1)"
         },
 
@@ -74,15 +79,26 @@
         {
             "id": "$ |setup.smarts|[2]",
             "name": "init$ alife_object(|this.id|):name()",
-            "link_id": "attacker_squad_smart"
+            "link_id": "attacker_smart"
         },
 
         {
-            "section_name":"$ |setup.enemy_section|",
-            "id": "init$ utils_obj.create_squad(|this.section_name|, |attacker_squad_smart.name|).id",
+            "section_name": "army_sim_squad_alpha",
+            "id": "init$ utils_obj.create_squad(|this.section_name|, |attacker_smart.name|).id",
+            "se_obj": "@$ alife_object(|this.id|) or false",
 
-            "move": "init$ wtf.set(alife_object(|this.id|), 'scripted_target', |smart.name|)",
-            "-move": "del$ wtf.set(alife_object(|this.id|) or {}, 'scripted_target', nil) or 1"
+            "-move": "del$ wtf.set(|this.se_obj| or {}, 'scripted_target', nil) or 1",
+            "actions": [
+                {
+                    "when": "@$ level.name() == |setup.level|",
+                    "run": "@$ wtf.set(|this.se_obj| or {}, 'scripted_target', |smart.name|) and false"
+                },
+                {
+                    "COMMENT": "Reset gametime so they don't leave",
+                    "when": "@$ |this.se_obj|",
+                    "run": "@$ wtf.set(|this.se_obj| or {}, 'stay_time', game.get_game_time())"
+                }
+            ]
         }
     ]
 }

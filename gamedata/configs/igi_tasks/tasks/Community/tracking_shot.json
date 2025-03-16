@@ -1,10 +1,10 @@
 {
-	"WTF_VERSION": "4.1",
+	"WTF_VERSION": "4.2",
 	"CREDITS": "\\nNerkokant - idea\\nIgigog - scripting\\nMich - KS23 Blowgun\\nBilly, Medic - descriptions",
 	"entities": [
 		{
-			"GEN": "@$ igi_generate.Split('ids', 'id', 1)",
 			"ids": "$ igi_finder.get_smarts(0,0)",
+			"id": "$ wtf.shuffle(|this.ids|)[1] or false",
 			"name": "$ alife_object(|this.id|):name()",
 			"link_id": "smart",
 			"to_description": true
@@ -12,8 +12,8 @@
 
 		{
 			"section_name":"simulation_flesh",
-			"id": "1$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-			"init": "1$ igi_helper.init_squad(|this.id|)",
+			"id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
+			"init": "init$ igi_helper.init_squad(|this.id|)",
 			"CONTROLLER":"@$ igi_target_shoot.Shoot",
         	"weapon": "wpn_igi_ks23_ecolog",
 			"to_description": true
@@ -21,15 +21,15 @@
 
 		{
 			"section_name":"wpn_igi_ks23_ecolog",
-			"id": "1$ alife_create_item(|this.section_name|, alife_object(0)).id",
-			"notify": "1$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
+			"id": "init$ alife_create_item(|this.section_name|, alife_object(0)).id",
+			"notify": "init$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
 			"CONTROLLER":"@$ igi_target_return.Return"
 		},
 
 		{
 			"section_name":"ammo_23_igi_eco",
-			"id": "1$ alife_create_item(|this.section_name|, alife_object(0)).id",
-			"notify": "1$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1"
+			"id": "init$ alife_create_item(|this.section_name|, alife_object(0)).id",
+			"notify": "init$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1"
 		}
 	],
 	"quest_givers": [

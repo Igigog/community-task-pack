@@ -4,7 +4,7 @@
 
 	<!-- Sid bribery -->
 	<string id="igi_task_text_community_sid_bribery_name">
-		<text>The more you know</text>
+		<text>The More You Know</text>
 	</string>
 	<string id="igi_task_text_community_sid_bribery_text">
 		<text>My job is to leave the package at the spot near the checkpoint.</text>
@@ -56,6 +56,20 @@
 	</string>
 	<string id="igi_task_text_community_orders_army_finish">
 		<text>Is that everything you have to report? Good. I'll relay this to the next patrols before moving out. Good work, soldier. You are dismissed.</text>
+	</string>
+
+		<!--  -->
+	<string id="igi_task_text_community_medic_package_name">
+		<text>Between Law And Profit</text>
+	</string>
+	<string id="igi_task_text_community_medic_package_text">
+		<text>My job is to contact a squad of mercenaries and receive a package.</text>
+	</string>
+	<string id="igi_task_text_community_medic_package_about">
+		<text>My boys are in quite a pinch: they were... Uhh... Delivering a special package my way. The origin of the package might or might not have involved military research, and the army might be tailing them. I need you to contact my boys, receive the package, and return it here safely. Remember the password: Tetriandoch.</text>
+	</string>
+	<string id="igi_task_text_community_medic_package_finish">
+		<text>Exactly what your mission required. Nice work. Here's your pay, and a little bit extra from me.</text>
 	</string>
 
 </string_table>
