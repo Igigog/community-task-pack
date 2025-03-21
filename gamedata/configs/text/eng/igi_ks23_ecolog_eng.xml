@@ -9,16 +9,16 @@
 	<string id="st_wpn_igi_ks23_ecolog_descr">
 		<text>Modified smoothbore carbine, multifunctional police weapon designed for crowd control, selective force, mental and chemical influence on offenders. The rifle is operated using sliding forend, which is rigidly connected to the improved bolt. Unlike the basic design the barrel is locked when fired by rotating the bolt. Trigger mechanism is of trigger-type. Ammunition is fed from three-round magazine, located below the barrel.
 
-			%c[d_purple] ï¿½ %c[ui_gray_2] Mass: %c[ui_gray_1]3,85 kg\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Length: %c[ui_gray_1]1040 mm\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Barrel length: %c[ui_gray_1]510 mm\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Cartridge: %c[ui_gray_1]Dart\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Caliber: %c[ui_gray_1]23 mm\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Action: %c[ui_gray_1]Pump action\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Effective range: %c[ui_gray_1]up to 100 m\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Max. range: %c[ui_gray_1]150 m\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Feed system: %c[ui_gray_1]Underbarrel tube which holds 3 cartridges, plus one cartridge in the chamber .\n
-			%c[d_purple] ï¿½ %c[ui_gray_2] Sight: %c[ui_gray_1]Integrated 3.4ï¿½. scope\n</text>
+			%c[d_purple] • %c[ui_gray_2] Mass: %c[ui_gray_1]3,85 kg\n
+			%c[d_purple] • %c[ui_gray_2] Length: %c[ui_gray_1]1040 mm\n
+			%c[d_purple] • %c[ui_gray_2] Barrel length: %c[ui_gray_1]510 mm\n
+			%c[d_purple] • %c[ui_gray_2] Cartridge: %c[ui_gray_1]Dart\n
+			%c[d_purple] • %c[ui_gray_2] Caliber: %c[ui_gray_1]23 mm\n
+			%c[d_purple] • %c[ui_gray_2] Action: %c[ui_gray_1]Pump action\n
+			%c[d_purple] • %c[ui_gray_2] Effective range: %c[ui_gray_1]up to 100 m\n
+			%c[d_purple] • %c[ui_gray_2] Max. range: %c[ui_gray_1]150 m\n
+			%c[d_purple] • %c[ui_gray_2] Feed system: %c[ui_gray_1]Underbarrel tube which holds 3 cartridges, plus one cartridge in the chamber .\n
+			%c[d_purple] • %c[ui_gray_2] Sight: %c[ui_gray_1]Integrated 3.4x. scope\n</text>
 	</string>
 
 	<string id="ammo_23_igi_eco">
