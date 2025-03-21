@@ -18,8 +18,8 @@
 		"actions": [{
 			"when": "@$ get_object_by_id(|this.id|) ~= nil",
 			"run": "@$ wtf_hf_tasks.set_item_condition(|this.id|, 10, 40)"
-		}
-	]
+		}],
+		"to_description": true
 	},
 
 	{
