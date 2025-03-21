@@ -18,7 +18,7 @@
 			%c[d_purple] • %c[ui_gray_2] Effective range: %c[ui_gray_1]up to 100 m\n
 			%c[d_purple] • %c[ui_gray_2] Max. range: %c[ui_gray_1]150 m\n
 			%c[d_purple] • %c[ui_gray_2] Feed system: %c[ui_gray_1]Underbarrel tube which holds 3 cartridges, plus one cartridge in the chamber .\n
-			%c[d_purple] • %c[ui_gray_2] Sight: %c[ui_gray_1]Integrated 3.4x. scope\n</text>
+			%c[d_purple] • %c[ui_gray_2] Sight: %c[ui_gray_1]Integrated 3.4x scope\n</text>
 	</string>
 
 	<string id="ammo_23_igi_eco">
