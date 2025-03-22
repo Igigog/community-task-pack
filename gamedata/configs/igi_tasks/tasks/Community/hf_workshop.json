@@ -17,7 +17,7 @@
 		"notify": "init$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
 		"actions": [{
 			"when": "@$ get_object_by_id(|this.id|) ~= nil",
-			"run": "@$ wtf_hf_tasks.set_item_condition(|this.id|, 10, 40)"
+			"run": "@$ wtf_hf_tasks.set_item_condition(|this.id|, 10, 40) or false"
 		}],
 		"to_description": true
 	},
