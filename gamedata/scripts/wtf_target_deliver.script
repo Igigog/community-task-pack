@@ -30,7 +30,7 @@ function Deliver.status(entity)
     if (not se_target) or (not se_location) then return TASK_STATUSES.FAILED end
 
     if is_close(se_target, se_location) then
-        return TASK_STATUSES.READY_TO_FINISH
+        return TASK_STATUSES.COMPLETED
     end
 
     return TASK_STATUSES.RUNNING

@@ -1,6 +1,6 @@
 local TASK_STATUSES = igi_subtask.TASK_STATUSES
 
-function ready_to_finish(se_obj)
+function completed(se_obj)
     local item = get_object_by_id(se_obj.id)
 	if not item then return false end
 
@@ -26,7 +26,7 @@ Repair = {}
 function Repair.status(entity)
     local se_obj = alife_object(entity.id)
 	if not se_obj then return TASK_STATUSES.FAILED end
-	if ready_to_finish(se_obj) then return TASK_STATUSES.READY_TO_FINISH end
+	if completed(se_obj) then return TASK_STATUSES.COMPLETED end
     return TASK_STATUSES.RUNNING
 end
 
@@ -71,7 +71,7 @@ function Repair.test(entity)
 		repair_item(obj)
 
 	elseif entity._test_stage == 5 then
-		assert_test(entity.status == "READY_TO_FINISH", "Quest did not complete")
+		assert_test(entity.status == igi_subtask.TASK_STATUSES.COMPLETED, "Quest did not complete")
 		
 		return true
 	end
