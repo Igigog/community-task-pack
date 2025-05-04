@@ -35,26 +35,9 @@
 
         {
             "section_name":"merc_sim_squad_advanced",
-
-            "id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
+            "smart_id": "init$ |smart.id|",
             "se_obj": "@$ alife_object(|this.id|) or false",
-
-            "del": "del$ wtf.set(|this.se_obj| or {}, 'scripted_target', nil) or 1",
-
-            "force_online": "init$ wtf.set(|this.se_obj|, 'force_online', true)",
-            "-force_online": "del$ wtf.set(|this.se_obj| or {}, 'force_online', false)",
-
-            "no_offline_combat": "init$ wtf.set(sim_offline_combat.task_squads, |this.id|, true)",
-            "-no_offline_combat": "del$ wtf.set(sim_offline_combat.task_squads, |this.id|, nil) or 1",
-
-            "actions": [
-                {
-                    "COMMENT": "Reset gametime so they don't leave",
-                    "when": "@$ |this.se_obj|",
-                    "run": "@$ wtf.set(|this.se_obj| or {}, 'stay_time', game.get_game_time())"
-                }
-            ],
-
+            "HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.ForceOnline", "@$ wtf.NoOfflineCombat", "@$ wtf.PinToSmart"],
             "link_id": "friend_squad"
         },
 
@@ -78,25 +61,18 @@
     "attacker_entities": [
         {
             "id": "$ |setup.smarts|[2]",
-            "name": "init$ alife_object(|this.id|):name()",
             "link_id": "attacker_smart"
         },
 
         {
             "section_name": "army_sim_squad_alpha",
-            "id": "init$ utils_obj.create_squad(|this.section_name|, |attacker_smart.name|).id",
+            "smart_id":"init$ |attacker_smart.id|",
             "se_obj": "@$ alife_object(|this.id|) or false",
-
-            "-move": "del$ wtf.set(|this.se_obj| or {}, 'scripted_target', nil) or 1",
+            "HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.PinToSmart"],
             "actions": [
                 {
                     "when": "@$ level.name() == |setup.level|",
                     "run": "@$ wtf.set(|this.se_obj| or {}, 'scripted_target', |smart.name|) and false"
-                },
-                {
-                    "COMMENT": "Reset gametime so they don't leave",
-                    "when": "@$ |this.se_obj|",
-                    "run": "@$ wtf.set(|this.se_obj| or {}, 'stay_time', game.get_game_time())"
                 }
             ]
         }

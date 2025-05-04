@@ -12,8 +12,8 @@
 
 		{
 			"section_name":"simulation_flesh",
-			"id": "init$ utils_obj.create_squad(|this.section_name|, |smart.name|).id",
-			"init": "init$ igi_helper.init_squad(|this.id|)",
+			"smart_id": "|smart.id|",
+			"HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.ForceOnline"],
 			"CONTROLLER":"@$ igi_target_shoot.Shoot",
         	"weapon": "wpn_igi_ks23_ecolog",
 			"to_description": true
