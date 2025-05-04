@@ -13,8 +13,7 @@
 		"CONTROLLER": "@$ wtf_target_repair.Repair",
 		"all_sections": "$ igi_helper.db_ini:collect_section('hf_weapon_repair')",
 		"section_name":"$ igi_utils.random_table_key(|this.all_sections|)",
-		"id": "init$ alife_create_item(|this.section_name|, db.actor).id",
-		"notify": "init$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
+		"id": "init$ igi_helper.give_to_actor(|this.section_name|)",
 		"actions": [{
 			"when": "@$ get_object_by_id(|this.id|) ~= nil",
 			"run": "@$ wtf_hf_tasks.set_item_condition(|this.id|, 10, 40) or false"

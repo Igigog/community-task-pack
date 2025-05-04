@@ -21,15 +21,9 @@
 
 		{
 			"section_name":"wpn_igi_ks23_ecolog",
-			"id": "init$ alife_create_item(|this.section_name|, alife_object(0)).id",
-			"notify": "init$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1",
+			"id": "init$ igi_helper.give_to_actor(|this.section_name|)",
+			"bullet": "init$ igi_helper.give_to_actor('ammo_23_igi_eco')",
 			"CONTROLLER":"@$ igi_target_return.Return"
-		},
-
-		{
-			"section_name":"ammo_23_igi_eco",
-			"id": "init$ alife_create_item(|this.section_name|, alife_object(0)).id",
-			"notify": "init$ news_manager.relocate_item(db.actor, \"in\", |this.section_name|, 1) or 1"
 		}
 	],
 	"rewarder": "@$ igi_rewards.Static({money = 8000, goodwill = 50})",
