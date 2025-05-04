@@ -68,12 +68,10 @@
             "section_name": "army_sim_squad_alpha",
             "smart_id":"init$ |attacker_smart.id|",
             "se_obj": "@$ alife_object(|this.id|) or false",
-            "HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.PinToSmart"],
-            "actions": [
-                {
-                    "when": "@$ level.name() == |setup.level|",
-                    "run": "@$ wtf.set(|this.se_obj| or {}, 'scripted_target', |smart.name|) and false"
-                }
+            "HELPERS": [
+                "@$ wtf.CreateSquad",
+                "@$ wtf.PinToSmart",
+                "@$ wtf_community_tasks.SendToSmartWhenPlayerComesTo(|setup.level|, |smart.name|)"
             ]
         }
     ]

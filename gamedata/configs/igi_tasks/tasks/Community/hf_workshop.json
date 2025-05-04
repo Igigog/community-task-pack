@@ -14,10 +14,7 @@
 		"all_sections": "$ igi_helper.db_ini:collect_section('hf_weapon_repair')",
 		"section_name":"$ igi_utils.random_table_key(|this.all_sections|)",
 		"id": "init$ igi_helper.give_to_actor(|this.section_name|)",
-		"actions": [{
-			"when": "@$ get_object_by_id(|this.id|) ~= nil",
-			"run": "@$ wtf_hf_tasks.set_item_condition(|this.id|, 10, 40) or false"
-		}],
+		"HELPERS": ["@$ wtf_hf_tasks.Break"],
 		"to_description": true
 	},
 

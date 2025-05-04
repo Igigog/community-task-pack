@@ -107,3 +107,18 @@ function keys(tbl)
     end
     return out    
 end
+
+function SendToSmartWhenPlayerComesTo(level_name, smart_id)
+    local t = {}
+    t.status = function (entity)
+        if t._done then return end
+        if level.name() == level_name then
+            t._done = true
+            local se_squad = alife_object(entity.id)
+            if se_squad then
+                se_squad.scripted_target = alife_object(smart_id):name()
+            end
+        end
+    end
+    return t
+end

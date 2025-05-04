@@ -18,3 +18,13 @@ end
 	end
 	se_save_var( item:id(), item:name(), "parts", parts_data )
 end
+
+Break = {
+    status = function (entity)
+        if entity._break_done then return end
+        if get_object_by_id(entity.id) ~= nil then
+           entity._break_done = true
+           set_item_condition(entity.id, 10, 40)
+        end
+    end
+}
