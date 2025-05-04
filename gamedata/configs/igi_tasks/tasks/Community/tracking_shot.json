@@ -12,7 +12,7 @@
 
 		{
 			"section_name":"simulation_flesh",
-			"smart_id": "|smart.id|",
+			"smart_id": "init$ |smart.id|",
 			"HELPERS": ["@$ wtf.CreateSquad", "@$ wtf.ForceOnline"],
 			"CONTROLLER":"@$ igi_target_shoot.Shoot",
         	"weapon": "wpn_igi_ks23_ecolog",
